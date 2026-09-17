@@ -10,7 +10,7 @@ npx serve .
 
 ## Structure
 
-- `index.html` — homepage
+- `index.html`, `menu.html`, `shop.html`, `our-story.html`, `franchise.html`, `visit.html` — pages (header/footer duplicated in each; keep them in sync)
 - `styles.css` — design tokens (`:root`) + section styles
 - `art/` — logo, illustrations, doodles, product drawings
 
@@ -18,4 +18,7 @@ Doodle intensity: set `--scatter-opacity` in `styles.css` (`0` off, `0.85` spars
 
 ## TODO
 
-- Menu, Shop, Our Story, Franchise, Visit pages (nav currently anchors to homepage sections)
+- Franchise: fill in placeholders (`[fee]`, `[fit out cost]`, `[floor area]`, `[weeks]`, `[Term]`)
+- Franchise enquiry form has no backend yet (shows a confirmation note only)
+- Shop "Add" buttons are not wired to a cart
+- Social links in footer are placeholders

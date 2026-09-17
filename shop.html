@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop — Yellow Cap Cafe</title>
+<meta name="description" content="Take a bit of Yellow Cap Cafe home: cups, caps, totes, beans and gift sets, made in small runs.">
+<link rel="icon" type="image/png" href="art/doodle-cap.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header wrap">
+    <a class="site-header__home" href="./"><img class="site-header__logo" src="art/logo.png" alt="Yellow Cap Cafe"></a>
+    <nav class="caps-nav" aria-label="Main">
+      <a href="menu.html">Menu</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="franchise.html">Franchise</a>
+      <a href="visit.html">Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section wrap" style="--pt:clamp(30px,6vw,72px); --pb:clamp(20px,3vw,32px)">
+      <img class="abs-doodle" src="art/doodle-crown.png" alt="" style="right:clamp(18px,5vw,64px); top:clamp(22px,4vw,52px); width:64px">
+      <img class="abs-doodle" src="art/doodle-fig-skate.png" alt="" style="right:clamp(110px,18vw,220px); bottom:0; width:76px">
+      <p class="eyebrow eyebrow--8">Shop</p>
+      <h1 class="page-title">take a bit of us home</h1>
+      <p class="page-lede">Made in small runs, same as the coffee. Pick it up at the counter or we will post it.</p>
+    </section>
+
+    <section class="section wrap" style="--pb:clamp(10px,2vw,20px)">
+      <div class="filters" role="group" aria-label="Filter products">
+        <button type="button" data-filter="All" aria-pressed="true">All</button>
+        <button type="button" data-filter="Drinkware" aria-pressed="false">Drinkware</button>
+        <button type="button" data-filter="Wear" aria-pressed="false">Wear</button>
+        <button type="button" data-filter="Beans" aria-pressed="false">Beans</button>
+      </div>
+    </section>
+
+    <section class="section wrap" style="--pt:clamp(24px,4vw,44px); --pb:clamp(30px,5vw,60px)">
+      <div class="shop__grid shop__grid--full">
+        <article class="product" data-cat="Drinkware">
+          <div class="product__art"><img src="art/product-cup.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Collectible cups</p>
+            <p class="product__meta">Set of four, one for each pose</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">18.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Drinkware">
+          <div class="product__art"><img src="art/product-tumbler.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Tumbler</p>
+            <p class="product__meta">350ml, keeps it hot until the bus comes</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">26.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Drinkware">
+          <div class="product__art"><img src="art/product-mug.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Ceramic mug</p>
+            <p class="product__meta">The one we use in the cafe</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">15.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Wear">
+          <div class="product__art"><img src="art/product-cap.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">The cap</p>
+            <p class="product__meta">One size, brim already worn in</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">22.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Wear">
+          <div class="product__art"><img src="art/product-tote.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Canvas tote</p>
+            <p class="product__meta">Cotton, natural, fits a laptop and a loaf</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">14.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Wear">
+          <div class="product__art"><img src="art/product-pin.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Enamel pin</p>
+            <p class="product__meta">The figure, tipping the cap</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">8.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Wear">
+          <div class="product__art"><img src="art/product-stickers.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Sticker sheet</p>
+            <p class="product__meta">Twelve doodles, one sheet</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">6.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Beans">
+          <div class="product__art"><img src="art/product-beans.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Yellow Cap Coffee beans</p>
+            <p class="product__meta">250g whole bean, house blend</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">16.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Beans">
+          <div class="product__art"><img src="art/product-beans.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Single origin beans</p>
+            <p class="product__meta">250g, rotates every few weeks</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">19.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+        <article class="product" data-cat="Beans">
+          <div class="product__art"><img src="art/product-gift.png" alt=""></div>
+          <div class="product__info">
+            <p class="product__name">Gift set</p>
+            <p class="product__meta">Beans, a mug and a sticker sheet in a box</p>
+          </div>
+          <div class="product__buy">
+            <span class="product__price">38.00</span>
+            <button type="button" class="btn btn--sm">Add</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" style="--pb:clamp(30px,5vw,56px)">
+      <div class="doodle-note" style="border-top:1.5px solid var(--rule); padding-top:clamp(24px,4vw,40px)">
+        <img src="art/doodle-fig-cheering.png" alt="" style="width:70px">
+        <p style="text-wrap:wrap">Free local delivery on orders over 40. Everything else goes out the next morning, wrapped in paper and a sticker.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="--footer-pad:clamp(10px,3vw,30px)">
+    <div class="site-footer__top wrap">
+      <div class="site-footer__brand">
+        <img src="art/logo.png" alt="Yellow Cap Cafe">
+        <p>Yellow Cap Coffee, roasted and poured on Pine Street.</p>
+      </div>
+      <nav class="caps-nav" aria-label="Social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Newsletter</a>
+      </nav>
+    </div>
+    <div class="doodle-row" aria-hidden="true">
+      <img src="art/doodle-fig-standing.png" alt="" style="height:44px">
+      <img src="art/doodle-fig-walking.png" alt="" style="height:44px">
+      <img src="art/doodle-fig-skate.png" alt="" style="height:38px">
+      <img src="art/doodle-fig-sitting.png" alt="" style="height:42px">
+      <img src="art/doodle-fig-lounging.png" alt="" style="height:30px">
+      <img src="art/doodle-fig-cheering.png" alt="" style="height:44px">
+      <img src="art/doodle-cap.png" alt="" style="height:30px">
+      <img src="art/doodle-cup.png" alt="" style="height:40px">
+      <img src="art/doodle-smiley.png" alt="" style="height:34px">
+      <img src="art/doodle-heart.png" alt="" style="height:30px">
+      <img src="art/doodle-crown.png" alt="" style="height:32px">
+      <img src="art/doodle-star.png" alt="" style="height:32px">
+      <img src="art/doodle-bolt.png" alt="" style="height:34px">
+      <img src="art/doodle-cloud.png" alt="" style="height:28px">
+      <img src="art/doodle-peace.png" alt="" style="height:36px">
+      <img src="art/doodle-sparkle.png" alt="" style="height:28px">
+    </div>
+  </footer>
+
+<script>
+  // Category filter
+  const filters = document.querySelectorAll('.filters button');
+  const products = document.querySelectorAll('.product');
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    const active = btn.dataset.filter;
+    filters.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+    products.forEach(p => { p.hidden = active !== 'All' && p.dataset.cat !== active; });
+  }));
+</script>
+
+</body>
+</html>
