@@ -538,24 +538,28 @@ img { height: auto; }
 /* Stick figures are tall and narrow, so size them by height instead of width. */
 .soon img.soon__fig { width: auto; height: clamp(96px, 15vw, 140px); }
 
-/* ---------- Mobile ---------- */
-@media (max-width: 700px) {
-  .site-header { padding-top: 16px; padding-bottom: 16px; gap: 14px; }
-  .site-header__logo { height: 42px; }
-  .site-header .caps-nav { font-size: 12px; letter-spacing: 0.1em; gap: 10px 14px; flex-wrap: wrap; }
-
-  /* The scattered doodles are placed against desktop whitespace. On a narrow
-     screen the heading fills the column and they land on the text, so let them
-     leave their absolute positions and flow as a small row above the title. */
+/* ---------- Tablet and below ---------- */
+/* The scattered doodles are placed against desktop whitespace. As the viewport
+   narrows the gutter shrinks faster than they do, so they start clipping the
+   heading well before phone widths — hence 900px, not 700px. Below this they
+   leave their absolute positions and flow as a small row above the title. */
+@media (max-width: 900px) {
   .abs-doodle {
     position: static;
     display: inline-block;
     vertical-align: bottom;
     margin: 0 12px 12px 0;
   }
+}
 
-  /* Same problem in the hero: keep the doodles sitting near the edges and drop
-     the three that fall inside the centred text column. */
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .site-header { padding-top: 16px; padding-bottom: 16px; gap: 14px; }
+  .site-header__logo { height: 42px; }
+  .site-header .caps-nav { font-size: 12px; letter-spacing: 0.1em; gap: 10px 14px; flex-wrap: wrap; }
+
+  /* The hero doodles only reach the centred text column at phone widths, so
+     they stay in place longer than the ones above. */
   .hero__scatter img:nth-child(3),
   .hero__scatter img:nth-child(5),
   .hero__scatter img:nth-child(6) { display: none; }

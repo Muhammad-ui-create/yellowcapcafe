@@ -57,9 +57,22 @@ source sheets: transparent PNGs, longest side 320px.
 ### Responsive note
 
 `.abs-doodle` elements are absolutely positioned against desktop whitespace. Under
-700px they are switched to `position: static` so they flow as a small row above the
-page title instead of landing on the heading. If you add a new decorative doodle,
+**900px** they are switched to `position: static` so they flow as a small row above
+the page title instead of clipping the heading. If you add a new decorative doodle,
 give it that class and it will behave the same way.
+
+### Cache busting — read before editing styles.css
+
+Every page links the stylesheet as `styles.css?v=N`. GitHub Pages serves CSS with
+`Cache-Control: max-age=600`, so without the version a returning visitor can get new
+HTML with a 10-minute-old stylesheet, which renders the page unstyled and broken.
+
+**After changing `styles.css`, bump `N` in all six HTML files**, or the fix will not
+reach anyone who has already visited:
+
+```bash
+sed -i 's/styles\.css?v=[0-9]*/styles.css?v=NEXT/' *.html
+```
 
 ## Needed from the client
 
