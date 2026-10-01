@@ -39,6 +39,15 @@ Replaced with "coming soon" placeholders, pending real content from the client:
 Verified true and kept: the address (6466 N Sheridan Rd), the brand identity and
 artwork, and the Sheridan/Loyola street names on the sketch map.
 
+## Artwork
+
+The doodle set in  was re-cut from the client's high-resolution
+sheets: transparent PNGs, longest side 320px.
+
+-  was removed at the client's request and must not come back.
+-  is the only doodle still from the original mock, as no
+  replacement was supplied. It is lower resolution than the rest.
+
 ## Needed from the client
 
 1. Is the cafe **open yet**? Copy is currently neutral on this; it should say so either way.
@@ -47,3 +56,4 @@ artwork, and the Sheridan/Loyola street names on the sketch map.
 4. Final menu and prices
 5. Whether the shop and franchise programme are real offerings, and on what terms
 6. Real social media URLs (footer links are still "#")
+7. A replacement `doodle-crown.png`, or confirmation to drop the crown entirely
