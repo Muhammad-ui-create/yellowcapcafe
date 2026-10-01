@@ -41,11 +41,12 @@ artwork, and the Sheridan/Loyola street names on the sketch map.
 
 ## Artwork
 
-The doodle set in  was re-cut from the client's high-resolution
-sheets: transparent PNGs, longest side 320px.
+The doodle set in `art/doodle-*.png` was re-cut from the client's high-resolution
+source sheets: transparent PNGs, longest side 320px.
 
--  was removed at the client's request and must not come back.
--  is the only doodle still from the original mock, as no
+- `doodle-fig-lounging.png` was removed at the client's request and must not come
+  back. The Visit map uses `doodle-fig-walking.png` in its place.
+- `doodle-crown.png` is the only doodle still from the original mock, as no
   replacement was supplied. It is lower resolution than the rest.
 
 ## Needed from the client
