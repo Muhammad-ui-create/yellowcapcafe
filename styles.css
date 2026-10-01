@@ -53,6 +53,8 @@ img { height: auto; }
   text-transform: uppercase;
   font-weight: 500;
 }
+/* Wrap between links, never inside one ("OUR STORY" split over two lines). */
+.caps-nav a { white-space: nowrap; }
 
 /* Header */
 .site-header {
@@ -533,3 +535,36 @@ img { height: auto; }
 }
 .soon__text { margin: 0; max-width: 460px; font-size: 16px; line-height: 1.8; color: var(--grey); }
 .soon--inline { margin-top: 8px; }
+/* Stick figures are tall and narrow, so size them by height instead of width. */
+.soon img.soon__fig { width: auto; height: clamp(96px, 15vw, 140px); }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  .site-header { padding-top: 16px; padding-bottom: 16px; gap: 14px; }
+  .site-header__logo { height: 42px; }
+  .site-header .caps-nav { font-size: 12px; letter-spacing: 0.1em; gap: 10px 14px; flex-wrap: wrap; }
+
+  /* The scattered doodles are placed against desktop whitespace. On a narrow
+     screen the heading fills the column and they land on the text, so let them
+     leave their absolute positions and flow as a small row above the title. */
+  .abs-doodle {
+    position: static;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 12px 12px 0;
+  }
+
+  /* Same problem in the hero: keep the doodles sitting near the edges and drop
+     the three that fall inside the centred text column. */
+  .hero__scatter img:nth-child(3),
+  .hero__scatter img:nth-child(5),
+  .hero__scatter img:nth-child(6) { display: none; }
+
+  /* Heights are set inline per doodle; max-height caps them without !important. */
+  .doodle-row { gap: 10px 14px; padding: 18px 0 22px; }
+  .doodle-row img { max-height: 28px; width: auto; }
+
+  .story { gap: 20px; }
+  .story__figure { width: clamp(96px, 26vw, 130px); }
+  .friend__inner { gap: 18px; }
+}

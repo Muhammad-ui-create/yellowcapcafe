@@ -46,8 +46,20 @@ source sheets: transparent PNGs, longest side 320px.
 
 - `doodle-fig-lounging.png` was removed at the client's request and must not come
   back. The Visit map uses `doodle-fig-walking.png` in its place.
-- `doodle-crown.png` is the only doodle still from the original mock, as no
-  replacement was supplied. It is lower resolution than the rest.
+- `logo.png`, `figure.png` and `doodle-crown.png` were likewise re-cut from the
+  client's high-resolution originals.
+- `figure-wink.png` is the winking variant, used for the homepage intro;
+  `figure.png` (no wink) carries Our Story.
+- Every `art/*.png` is now a transparent PNG, so all of it sits on the cream
+  background without a white box. `bench.png` and `cap-badge.png` are still from
+  the original mock and have not been re-supplied.
+
+### Responsive note
+
+`.abs-doodle` elements are absolutely positioned against desktop whitespace. Under
+700px they are switched to `position: static` so they flow as a small row above the
+page title instead of landing on the heading. If you add a new decorative doodle,
+give it that class and it will behave the same way.
 
 ## Needed from the client
 
@@ -57,4 +69,3 @@ source sheets: transparent PNGs, longest side 320px.
 4. Final menu and prices
 5. Whether the shop and franchise programme are real offerings, and on what terms
 6. Real social media URLs (footer links are still "#")
-7. A replacement `doodle-crown.png`, or confirmation to drop the crown entirely
