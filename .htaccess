@@ -1,0 +1,5 @@
+# Hostinger deploys the whole repo into public_html, so repo housekeeping files
+# would otherwise be readable on the live site. README.md holds internal notes.
+<FilesMatch "^(README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>
