@@ -240,9 +240,14 @@
       <div id="notify">
         <h2 class="notify__title">be first to know when we open</h2>
         <p class="notify__text">Opening day, the first menu and anything worth hearing about. No spam.</p>
-        <form class="notify__form" id="notify-form">
+        <form class="notify__form" id="notify-form" action="notify.php" method="post">
           <label class="visually-hidden" for="notify-email">Email address</label>
-          <input id="notify-email" type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+          <input id="notify-email" type="email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" required>
+          <!-- Honeypot: hidden from people, bots fill it in and get ignored. -->
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="notify-website">Leave this empty</label>
+            <input id="notify-website" type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <button class="btn btn--yellow" type="submit">Notify me</button>
         </form>
         <p class="notify__note" id="notify-note" role="status"></p>
@@ -279,15 +284,30 @@
     });
     nav.addEventListener('click', e => { if (e.target.closest('a')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Menu'; } });
 
-    // Signup: no mailing list is connected yet, so hand the address to the cafe's
-    // own inbox rather than pretending it was saved. Swap for Reach/Mailchimp later.
-    document.getElementById('notify-form').addEventListener('submit', e => {
+    // Signup: notify.php emails each signup to info@yellowcapcafe.com.
+    // Without JavaScript the form still posts and notify.php redirects back here.
+    const form = document.getElementById('notify-form');
+    const note = document.getElementById('notify-note');
+    form.addEventListener('submit', async e => {
       e.preventDefault();
-      const email = document.getElementById('notify-email').value;
-      const body = encodeURIComponent('Please let me know when Yellow Cap Cafe opens.\n\nMy email: ' + email);
-      location.href = 'mailto:info@yellowcapcafe.com?subject=' + encodeURIComponent('Notify me when you open') + '&body=' + body;
-      document.getElementById('notify-note').textContent = 'Your email app should open with a message ready to send.';
+      const button = form.querySelector('button');
+      button.disabled = true;
+      note.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const data = await res.json();
+        note.textContent = data.message;
+        if (data.ok) form.reset();
+      } catch {
+        note.textContent = 'Something went wrong. Please try again later.';
+      }
+      button.disabled = false;
     });
+    // Result message for the no-JavaScript path.
+    const notified = new URLSearchParams(location.search).get('notified');
+    if (notified !== null) {
+      note.textContent = notified === '1' ? "Thanks! We'll let you know when we open." : 'Please enter a valid email address.';
+    }
   </script>
 </body>
 </html>
