@@ -357,3 +357,23 @@ a { color: inherit; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- Very wide screens and browser zoom-out ----------
+   The layout is designed at 1440px. Past that, scale the whole page up so it keeps
+   the same proportions instead of shrinking into a thin centred column (zooming the
+   browser out to 25% makes a 1920px screen act like a 7680px one). Each step keeps the
+   effective width between 1440px and ~1620px, so the desktop layout is always used. */
+@media (min-width: 1600px) { body { zoom: 1.11; } }
+@media (min-width: 1800px) { body { zoom: 1.25; } }
+@media (min-width: 2000px) { body { zoom: 1.39; } }
+@media (min-width: 2250px) { body { zoom: 1.56; } }
+@media (min-width: 2550px) { body { zoom: 1.77; } }
+@media (min-width: 2900px) { body { zoom: 2.01; } }
+@media (min-width: 3300px) { body { zoom: 2.29; } }
+@media (min-width: 3750px) { body { zoom: 2.6; } }
+@media (min-width: 4300px) { body { zoom: 2.99; } }
+@media (min-width: 4900px) { body { zoom: 3.4; } }
+@media (min-width: 5600px) { body { zoom: 3.89; } }
+@media (min-width: 6400px) { body { zoom: 4.44; } }
+@media (min-width: 7300px) { body { zoom: 5.07; } }
+@media (min-width: 8400px) { body { zoom: 5.83; } }
