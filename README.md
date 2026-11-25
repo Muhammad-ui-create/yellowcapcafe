@@ -10,11 +10,13 @@ npx serve .
 
 ## Structure
 
-- `index.html`, `menu.html`, `shop.html`, `our-story.html`, `franchise.html`, `visit.html` — pages (header/footer duplicated in each; keep them in sync)
-- `styles.css` — design tokens (`:root`) + section styles
+- `index.html`, `menu.html`, `shop.html`, `our-story.html`, `franchise.html`, `visit.html`: pages. Header, footer and signup are identical on every page; change them in all six.
+- `notify.php`: emails "be first to know" signups to info@yellowcapcafe.com and keeps a CSV one level above public_html (Hostinger only, needs PHP).
+- `art/svg/`: the doodle set as vectors (lounging figure deliberately excluded).
+- `site.css` — design tokens (`:root`) + section styles
 - `art/` — logo, illustrations, doodles, product drawings
 
-Doodle intensity: set `--scatter-opacity` in `styles.css` (`0` off, `0.85` sparse, `1` lively).
+Doodle intensity: set `--scatter-opacity` in `site.css` (`0` off, `0.85` sparse, `1` lively).
 
 ## Content status
 
@@ -61,17 +63,17 @@ source sheets: transparent PNGs, longest side 320px.
 the page title instead of clipping the heading. If you add a new decorative doodle,
 give it that class and it will behave the same way.
 
-### Cache busting — read before editing styles.css
+### Cache busting — read before editing site.css
 
-Every page links the stylesheet as `styles.css?v=N`. GitHub Pages serves CSS with
+Every page links the stylesheet as `site.css?v=N`. GitHub Pages serves CSS with
 `Cache-Control: max-age=600`, so without the version a returning visitor can get new
 HTML with a 10-minute-old stylesheet, which renders the page unstyled and broken.
 
-**After changing `styles.css`, bump `N` in all six HTML files**, or the fix will not
+**After changing `site.css`, bump `N` in all six HTML files**, or the fix will not
 reach anyone who has already visited:
 
 ```bash
-sed -i 's/styles\.css?v=[0-9]*/styles.css?v=NEXT/' *.html
+sed -i 's/styles\.css?v=[0-9]*/site.css?v=NEXT/' *.html
 ```
 
 ## Needed from the client

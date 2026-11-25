@@ -4,103 +4,174 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Visit — Yellow Cap Cafe</title>
-<meta name="description" content="Yellow Cap Cafe is at 6466 N Sheridan Rd, Chicago, IL 60626.">
-<link rel="icon" type="image/png" href="art/doodle-cap.png">
+<meta name="description" content="Yellow Cap Cafe is opening soon at 6466 N Sheridan Rd, Chicago, IL 60626.">
+<link rel="icon" type="image/svg+xml" href="art/svg/icon-cap.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=2">
 </head>
 <body>
 
-  <header class="site-header wrap">
-    <a class="site-header__home" href="./"><img class="site-header__logo" src="art/logo.png" alt="Yellow Cap Cafe"></a>
-    <nav class="caps-nav" aria-label="Main">
-      <a href="menu.html">Menu</a>
-      <a href="shop.html">Shop</a>
-      <a href="our-story.html">Our Story</a>
-      <a href="franchise.html">Franchise</a>
-      <a href="visit.html" aria-current="page">Visit</a>
-    </nav>
+  <p class="strip">Opening soon at 6466 N Sheridan Rd, Rogers Park · <a href="#notify">Be first to know →</a></p>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="header__logo" href="./"><img src="art/logo.png" alt="Yellow Cap Cafe" width="1400" height="902"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="menu.html">Menu</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="visit.html" aria-current="page">Visit</a>
+        <a href="shop.html">Shop</a>
+        <a href="franchise.html">Franchise</a>
+        <a class="btn btn--ink" href="#notify">Get notified</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="section wrap" style="--pt:clamp(30px,6vw,72px); --pb:clamp(20px,3vw,34px)">
-      <img class="abs-doodle" src="art/doodle-fig-walking.png" alt="" style="right:clamp(20px,6vw,80px); top:clamp(20px,4vw,50px); width:76px">
-      <img class="abs-doodle" src="art/doodle-smiley.png" alt="" style="left:clamp(4px,1.5vw,18px); bottom:2px; width:36px">
-      <p class="eyebrow eyebrow--8">Visit us</p>
-      <h1 class="page-title">where to find us</h1>
-      <p class="page-lede">We are on Sheridan Road in Rogers Park, Chicago.</p>
-    </section>
-
-    <section class="section wrap" style="--pt:clamp(10px,2vw,24px); --pb:clamp(24px,4vw,44px)">
-      <div class="visit__grid visit__grid--page">
-        <div class="visit__details visit__details--page">
-          <div>
-            <p class="label">Address</p>
-            <p>6466 N Sheridan Rd<br>Chicago, IL 60626, USA</p>
-          </div>
-          <div>
-            <p class="label">Hours</p>
-            <p>To be confirmed.</p>
-          </div>
+    <section class="page-hero">
+      <div class="wrap page-hero__inner">
+        <div>
+          <span class="page-hero__eyebrow caps">Visit us</span>
+          <h1 class="page-hero__title display">Where to<span class="script">find us</span></h1>
+          <p class="page-hero__lede">One room on Sheridan Road in Rogers Park, Chicago. Walk in when we open, no booking needed.</p>
         </div>
-        <div class="map map--lg" role="img" aria-label="Map sketch: we are at the corner of Sheridan and Loyola">
-          <div class="map__grid"></div>
-          <div class="map__road-h"></div>
-          <div class="map__road-v"></div>
-          <div class="map__block" style="left:8%; top:14%; width:22%; height:24%"></div>
-          <div class="map__block" style="right:10%; bottom:12%; width:26%; height:22%"></div>
-          <div class="map__street" style="left:6%; top:44%">Sheridan Rd</div>
-          <div class="map__street" style="left:36%; bottom:8%; transform:translateX(18px)">Loyola Ave</div>
-          <div class="map__pin">
-            <span class="map__dot"></span>
-            <span class="map__label">we are here</span>
+        <img class="page-hero__figure" src="art/svg/character-walking-with-cup.svg" alt="">
+      </div>
+      <svg class="wave wave--hero" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C 180 0 360 56 540 28 S 900 0 1080 26 S 1320 52 1440 22 V56 H0Z" fill="#FAF0DC"/><path d="M0 30 C 180 0 360 56 540 28 S 900 0 1080 26 S 1320 52 1440 22" fill="none" stroke="#1D191A" stroke-width="3"/></svg>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="place">
+          <div class="place__inner">
+            <div class="place__copy">
+              <p class="section__eyebrow caps">Rogers Park · Chicago</p>
+              <h2 class="place__title display">Come sit <span class="script">a while</span></h2>
+              <ul class="place__facts">
+                <li><img src="art/svg/icon-cap.svg" alt="" width="40" height="27"><div><strong>Address</strong>6466 N Sheridan Rd<br>Chicago, IL 60626</div></li>
+                <li><img src="art/svg/icon-lightning.svg" alt="" width="24" height="40" style="width:24px; margin-left:8px"><div><strong>Opening hours</strong>To be confirmed before opening</div></li>
+                <li><img src="art/svg/icon-sparkle.svg" alt="" width="30" height="40" style="width:30px; margin-left:5px"><div><strong>Opening day</strong>Date to be announced</div></li>
+              </ul>
+              <a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&amp;query=6466+N+Sheridan+Rd+Chicago+IL+60626" target="_blank" rel="noopener">Get directions</a>
+            </div>
+            <div class="sketch-map" role="img" aria-label="Sketch map: Yellow Cap Cafe on Sheridan Road">
+              <div class="sketch-map__road"></div>
+              <span class="sketch-map__label">Sheridan Rd</span>
+              <div class="sketch-map__pin"><span class="sketch-map__flag">we are here!</span><span class="sketch-map__dot"></span></div>
+              <img class="sketch-map__fig" src="art/svg/character-walking-with-cup.svg" alt="">
+            </div>
           </div>
-          <img class="map__fig map__fig--top doodle" src="art/doodle-fig-walking.png" alt="">
         </div>
       </div>
     </section>
-
-    <section class="section wrap wrap--narrow" style="--pb:clamp(40px,6vw,76px)">
-      <div class="soon">
-        <img class="soon__fig" src="art/doodle-fig-walking.png" alt="">
-        <p class="soon__title">more details soon</p>
-        <p class="soon__text">Hours, parking, transit and accessibility information will be published here once confirmed.</p>
+    <section class="section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="panel__plate"><img src="art/svg/character-sitting-with-cup.svg" alt=""></div>
+          <div>
+            <p class="panel__tag caps">More details soon</p>
+            <h2 class="panel__title display">Getting here</h2>
+            <p class="panel__text">Parking, transit and accessibility information will be published here once confirmed.</p>
+            <div class="panel__ctas"><a class="btn btn--ink" href="https://www.google.com/maps/search/?api=1&amp;query=6466+N+Sheridan+Rd+Chicago+IL+60626" target="_blank" rel="noopener">Open in Google Maps</a></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" style="--footer-pad:clamp(20px,4vw,40px)">
-    <div class="site-footer__top wrap">
-      <div class="site-footer__brand">
-        <img src="art/logo.png" alt="Yellow Cap Cafe">
-        <p>Yellow Cap Cafe &middot; Sheridan Road, Chicago.</p>
+  <footer class="footer">
+    <div class="wrap footer__top">
+      <div class="footer__links">
+        <div>
+          <h3 class="caps">The cafe</h3>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="visit.html">Visit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="caps">More</h3>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="franchise.html">Franchise</a></li>
+          </ul>
+        </div>
+        <p class="footer__address">6466 N Sheridan Rd, Chicago, IL 60626</p>
       </div>
-      <nav class="caps-nav" aria-label="Social">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">Newsletter</a>
-      </nav>
+      <div id="notify">
+        <h2 class="notify__title">be first to know when we open</h2>
+        <p class="notify__text">Opening day, the first menu and anything worth hearing about. No spam.</p>
+        <form class="notify__form" id="notify-form" action="notify.php" method="post">
+          <label class="visually-hidden" for="notify-email">Email address</label>
+          <input id="notify-email" type="email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" required>
+          <!-- Honeypot: hidden from people, bots fill it in and get ignored. -->
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="notify-website">Leave this empty</label>
+            <input id="notify-website" type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="btn btn--yellow" type="submit">Notify me</button>
+        </form>
+        <p class="notify__note" id="notify-note" role="status"></p>
+      </div>
     </div>
-    <div class="doodle-row" aria-hidden="true">
-      <img src="art/doodle-fig-standing.png" alt="" style="height:44px">
-      <img src="art/doodle-fig-walking.png" alt="" style="height:44px">
-      <img src="art/doodle-fig-skate.png" alt="" style="height:38px">
-      <img src="art/doodle-fig-sitting.png" alt="" style="height:42px">
-      <img src="art/doodle-fig-cheering.png" alt="" style="height:44px">
-      <img src="art/doodle-cap.png" alt="" style="height:30px">
-      <img src="art/doodle-cup.png" alt="" style="height:40px">
-      <img src="art/doodle-smiley.png" alt="" style="height:34px">
-      <img src="art/doodle-heart.png" alt="" style="height:30px">
-      <img src="art/doodle-crown.png" alt="" style="height:32px">
-      <img src="art/doodle-star.png" alt="" style="height:32px">
-      <img src="art/doodle-bolt.png" alt="" style="height:34px">
-      <img src="art/doodle-cloud.png" alt="" style="height:28px">
-      <img src="art/doodle-peace.png" alt="" style="height:36px">
-      <img src="art/doodle-sparkle.png" alt="" style="height:28px">
+
+    <div class="crew">
+      <div class="wrap">
+        <div class="crew__line" aria-hidden="true">
+          <img src="art/svg/character-walking-with-cup.svg" alt="">
+          <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+          <img src="art/svg/character-standing-with-cup.svg" alt="">
+          <img src="art/svg/character-cheering-with-cup.svg" alt="">
+          <img src="art/svg/character-skateboarding.svg" alt="">
+          <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+          <img src="art/svg/character-sitting-with-cup.svg" alt="">
+        </div>
+        <div class="crew__base">
+          <span>© 2026 Yellow Cap Cafe</span>
+          <span class="script">good coffee, good days</span>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script>
+    // Mobile menu
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? 'Close' : 'Menu';
+    });
+    nav.addEventListener('click', e => { if (e.target.closest('a')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Menu'; } });
+
+    // Signup: notify.php emails each signup to info@yellowcapcafe.com.
+    // Without JavaScript the form still posts and notify.php redirects back here.
+    const form = document.getElementById('notify-form');
+    const note = document.getElementById('notify-note');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const button = form.querySelector('button');
+      button.disabled = true;
+      note.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const data = await res.json();
+        note.textContent = data.message;
+        if (data.ok) form.reset();
+      } catch {
+        note.textContent = 'Something went wrong. Please try again later.';
+      }
+      button.disabled = false;
+    });
+    // Result message for the no-JavaScript path.
+    const notified = new URLSearchParams(location.search).get('notified');
+    if (notified !== null) {
+      note.textContent = notified === '1' ? "Thanks! We'll let you know when we open." : 'Please enter a valid email address.';
+    }
+  </script>
 </body>
 </html>
