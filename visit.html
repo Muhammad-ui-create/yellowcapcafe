@@ -9,7 +9,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yellow Cap Cafe">
+<meta property="og:title" content="Visit — Yellow Cap Cafe">
+<meta property="og:description" content="Yellow Cap Cafe is opening soon at 6466 N Sheridan Rd, Chicago, IL 60626.">
+<meta property="og:url" content="https://yellowcapcafe.com/visit.html">
+<meta property="og:image" content="https://yellowcapcafe.com/art/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yellow Cap Cafe: good coffee, good days. Opening soon in Rogers Park, Chicago.">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
@@ -44,7 +55,7 @@
     </section>
     <section class="section">
       <div class="wrap">
-        <div class="place">
+        <div class="place" data-reveal>
           <div class="place__inner">
             <div class="place__copy">
               <p class="section__eyebrow caps">Rogers Park · Chicago</p>
@@ -68,7 +79,7 @@
     </section>
     <section class="section">
       <div class="wrap">
-        <div class="panel">
+        <div class="panel" data-reveal>
           <div class="panel__plate"><img src="art/svg/character-sitting-with-cup.svg" alt=""></div>
           <div>
             <p class="panel__tag caps">More details soon</p>
@@ -82,6 +93,7 @@
   </main>
 
   <footer class="footer">
+    <svg class="edge edge--top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V18 C1260 44 1080 4 900 20 S540 40 360 16 S120 2 0 22 Z" fill="#FAF0DC"/></svg>
     <div class="wrap footer__top">
       <div class="footer__links">
         <div>
@@ -119,16 +131,47 @@
     </div>
 
     <div class="crew">
-      <div class="wrap">
-        <div class="crew__line" aria-hidden="true">
-          <img src="art/svg/character-walking-with-cup.svg" alt="">
-          <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
-          <img src="art/svg/character-standing-with-cup.svg" alt="">
-          <img src="art/svg/character-cheering-with-cup.svg" alt="">
-          <img src="art/svg/character-skateboarding.svg" alt="">
-          <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
-          <img src="art/svg/character-sitting-with-cup.svg" alt="">
+      <div class="crew__stage" aria-hidden="true">
+        <div class="crew__track">
+          <div class="crew__line">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+          </div>
+          <div class="crew__line">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+          </div>
         </div>
+      </div>
+      <div class="wrap">
         <div class="crew__base">
           <span>© 2026 Yellow Cap Cafe</span>
           <span class="script">good coffee, good days</span>
@@ -167,6 +210,17 @@
       }
       button.disabled = false;
     });
+    // Scroll-in: reveal blocks as they enter the screen. If anything goes wrong, show everything.
+    try {
+      const blocks = document.querySelectorAll('[data-reveal]');
+      const io = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      blocks.forEach(b => io.observe(b));
+    } catch {
+      document.querySelectorAll('[data-reveal]').forEach(b => b.classList.add('is-in'));
+    }
+
     // Result message for the no-JavaScript path.
     const notified = new URLSearchParams(location.search).get('notified');
     if (notified !== null) {

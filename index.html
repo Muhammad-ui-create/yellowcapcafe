@@ -9,7 +9,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yellow Cap Cafe">
+<meta property="og:title" content="Yellow Cap Cafe — good coffee, good days">
+<meta property="og:description" content="A small neighbourhood coffee shop opening soon at 6466 N Sheridan Rd in Rogers Park, Chicago.">
+<meta property="og:url" content="https://yellowcapcafe.com/">
+<meta property="og:image" content="https://yellowcapcafe.com/art/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yellow Cap Cafe: good coffee, good days. Opening soon in Rogers Park, Chicago.">
+<meta name="twitter:card" content="summary_large_image">
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
@@ -51,6 +62,10 @@
           </div>
         </div>
         <div class="hero__figure">
+          <div class="hero__badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><defs><path id="badge-ring" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><circle cx="100" cy="100" r="98" fill="#1D191A"/><circle cx="100" cy="100" r="48" fill="#FAF4E6"/><text font-family="Work Sans, sans-serif" font-weight="800" font-size="18" fill="#F7BD11" letter-spacing="2"><textPath href="#badge-ring" textLength="462" lengthAdjust="spacing">OPENING SOON · ROGERS PARK · CHICAGO ·</textPath></text></svg>
+            <img src="art/svg/icon-cap.svg" alt="">
+          </div>
           <img src="art/svg/character-tipping-cap.svg" alt="The Yellow Cap character tipping his cap and winking" width="260" height="650">
         </div>
       </div>
@@ -61,28 +76,28 @@
     <section class="section">
       <div class="wrap">
         <div class="cards">
-          <article class="card card--yellow">
+          <article class="card card--yellow" data-reveal>
             <p class="card__tag caps">Coming soon</p>
             <h2 class="card__title display">The Menu</h2>
             <div class="card__plate"><img src="art/svg/character-standing-with-cup.svg" alt="" width="120" height="220"></div>
             <p class="card__text">A short menu, done properly. The full menu and prices go up before we open.</p>
             <a class="btn btn--ink" href="menu.html">Peek at the menu</a>
           </article>
-          <article class="card card--ink">
+          <article class="card card--ink" data-reveal>
             <p class="card__tag caps">Who we are</p>
             <h2 class="card__title display">Our Story</h2>
             <div class="card__plate"><img src="art/svg/character-walking-with-cup.svg" alt="" width="120" height="210"></div>
             <p class="card__text">A small, independent cafe, and the idea behind the yellow cap.</p>
             <a class="btn" href="our-story.html">Read the story</a>
           </article>
-          <article class="card card--yellow">
+          <article class="card card--yellow" data-reveal>
             <p class="card__tag caps">Rogers Park</p>
             <h2 class="card__title display">Visit Us</h2>
             <div class="card__plate"><img src="art/svg/character-sitting-with-cup.svg" alt="" width="120" height="190"></div>
             <p class="card__text">6466 N Sheridan Rd, Chicago. Opening hours to be confirmed.</p>
             <a class="btn btn--ink" href="visit.html">Find us</a>
           </article>
-          <article class="card card--ink">
+          <article class="card card--ink" data-reveal>
             <p class="card__tag caps">In the works</p>
             <h2 class="card__title display">The Shop</h2>
             <div class="card__plate"><img src="art/svg/character-skateboarding.svg" alt="" width="140" height="190"></div>
@@ -95,12 +110,13 @@
 
     <!-- Story feature: Colectivo's "Cody's favorites" spot, with our character instead of a portrait. -->
     <section class="story section">
+      <svg class="edge edge--top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V18 C1260 44 1080 4 900 20 S540 40 360 16 S120 2 0 22 Z" fill="#FAF0DC"/><path d="M1440 18 C1260 44 1080 4 900 20 S540 40 360 16 S120 2 0 22" fill="none" stroke="#1D191A" stroke-width="3" vector-effect="non-scaling-stroke"/></svg>
       <div class="wrap story__inner">
-        <div class="story__badge">
+        <div class="story__badge" data-reveal>
           <img src="art/svg/character-tipping-cap.svg" alt="" width="200" height="500">
           <span class="story__flag">hi there!</span>
         </div>
-        <div>
+        <div data-reveal>
           <p class="story__eyebrow caps">The friendly corner</p>
           <h2 class="story__title display">A cafe on <span class="script">Sheridan Road</span></h2>
           <p class="story__text">Yellow Cap Cafe is a small neighbourhood coffee shop in Rogers Park. The idea is a simple one: a short menu done properly, a room you are welcome to sit in for as long as you like, and staff who get to know the regulars.</p>
@@ -109,17 +125,18 @@
           <a class="btn btn--ink" href="our-story.html">Our story</a>
         </div>
       </div>
+      <svg class="edge edge--bottom" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 18 C180 44 360 4 540 20 S900 40 1080 16 S1320 2 1440 22 V40 H0 Z" fill="#FAF0DC"/><path d="M0 18 C180 44 360 4 540 20 S900 40 1080 16 S1320 2 1440 22" fill="none" stroke="#1D191A" stroke-width="3" vector-effect="non-scaling-stroke"/></svg>
     </section>
 
     <!-- Values: same rhythm as Colectivo's product cards, describing intentions, not claims. -->
     <section class="section">
       <div class="wrap">
-        <div class="section__head">
+        <div class="section__head" data-reveal>
           <p class="section__eyebrow caps">What we're going for</p>
           <h2 class="section__title display">Small things, <span class="script">done properly</span></h2>
         </div>
         <div class="values">
-          <article class="value">
+          <article class="value" data-reveal>
             <div class="value__art"><img src="art/svg/icon-coffee-cup.svg" alt="" width="120" height="137"></div>
             <div class="value__body">
               <h3 class="value__title display">A short menu</h3>
@@ -127,7 +144,7 @@
             </div>
             <p class="value__foot caps">Simple · Good · Every day</p>
           </article>
-          <article class="value">
+          <article class="value" data-reveal>
             <div class="value__art"><img src="art/svg/icon-smiley.svg" alt="" width="130" height="130"></div>
             <div class="value__body">
               <h3 class="value__title display">Familiar faces</h3>
@@ -135,7 +152,7 @@
             </div>
             <p class="value__foot caps">Hello · Again · Regulars</p>
           </article>
-          <article class="value">
+          <article class="value" data-reveal>
             <div class="value__art"><img src="art/svg/icon-heart.svg" alt="" width="130" height="127"></div>
             <div class="value__body">
               <h3 class="value__title display">A room to sit in</h3>
@@ -150,7 +167,7 @@
     <!-- Location: Colectivo's "Creating community" panel, for our one corner of Chicago. -->
     <section class="section" id="visit" style="padding-top:0">
       <div class="wrap">
-        <div class="place">
+        <div class="place" data-reveal>
           <div class="place__inner">
             <div class="place__copy">
               <p class="section__eyebrow caps">Find us</p>
@@ -174,13 +191,13 @@
     <!-- What's coming: Colectivo's "What's new" strip, honest about what's still in the works. -->
     <section class="section" style="padding-top:0">
       <div class="wrap">
-        <div class="banner">
+        <div class="banner" data-reveal>
           <img src="art/svg/icon-lightning.svg" alt="" width="40" height="67">
           <h2 class="display">What's coming to Yellow Cap?</h2>
           <img src="art/svg/icon-lightning.svg" alt="" width="40" height="67">
         </div>
         <div class="coming">
-          <article class="tile">
+          <article class="tile" data-reveal>
             <span class="tile__icon"><img src="art/svg/icon-sparkle.svg" alt="" width="38" height="50"></span>
             <div>
               <h3 class="tile__title display">Opening day</h3>
@@ -188,7 +205,7 @@
               <a href="#notify">Notify me →</a>
             </div>
           </article>
-          <article class="tile">
+          <article class="tile" data-reveal>
             <span class="tile__icon"><img src="art/svg/icon-crown.svg" alt="" width="38" height="29"></span>
             <div>
               <h3 class="tile__title display">Rewards</h3>
@@ -196,7 +213,7 @@
               <a href="#notify">Keep me posted →</a>
             </div>
           </article>
-          <article class="tile">
+          <article class="tile" data-reveal>
             <span class="tile__icon"><img src="art/svg/icon-cap.svg" alt="" width="38" height="25"></span>
             <div>
               <h3 class="tile__title display">Merch</h3>
@@ -204,7 +221,7 @@
               <a href="shop.html">See the shop →</a>
             </div>
           </article>
-          <article class="tile">
+          <article class="tile" data-reveal>
             <span class="tile__icon"><img src="art/svg/icon-star.svg" alt="" width="38" height="37"></span>
             <div>
               <h3 class="tile__title display">Franchising</h3>
@@ -218,6 +235,7 @@
   </main>
 
   <footer class="footer">
+    <svg class="edge edge--top" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V18 C1260 44 1080 4 900 20 S540 40 360 16 S120 2 0 22 Z" fill="#FAF0DC"/></svg>
     <div class="wrap footer__top">
       <div class="footer__links">
         <div>
@@ -255,16 +273,47 @@
     </div>
 
     <div class="crew">
-      <div class="wrap">
-        <div class="crew__line" aria-hidden="true">
-          <img src="art/svg/character-walking-with-cup.svg" alt="">
-          <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
-          <img src="art/svg/character-standing-with-cup.svg" alt="">
-          <img src="art/svg/character-cheering-with-cup.svg" alt="">
-          <img src="art/svg/character-skateboarding.svg" alt="">
-          <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
-          <img src="art/svg/character-sitting-with-cup.svg" alt="">
+      <div class="crew__stage" aria-hidden="true">
+        <div class="crew__track">
+          <div class="crew__line">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+          </div>
+          <div class="crew__line">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-coffee-cup.svg" alt="">
+            <img src="art/svg/character-cheering-with-cup.svg" alt="">
+            <img src="art/svg/character-skateboarding.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-heart.svg" alt="">
+            <img src="art/svg/character-standing-with-cup.svg" alt="">
+            <img class="crew__icon" src="art/svg/icon-star.svg" alt="">
+            <img src="art/svg/character-walking-with-cup.svg" alt="">
+          </div>
         </div>
+      </div>
+      <div class="wrap">
         <div class="crew__base">
           <span>© 2026 Yellow Cap Cafe</span>
           <span class="script">good coffee, good days</span>
@@ -303,6 +352,17 @@
       }
       button.disabled = false;
     });
+    // Scroll-in: reveal blocks as they enter the screen. If anything goes wrong, show everything.
+    try {
+      const blocks = document.querySelectorAll('[data-reveal]');
+      const io = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      blocks.forEach(b => io.observe(b));
+    } catch {
+      document.querySelectorAll('[data-reveal]').forEach(b => b.classList.add('is-in'));
+    }
+
     // Result message for the no-JavaScript path.
     const notified = new URLSearchParams(location.search).get('notified');
     if (notified !== null) {
